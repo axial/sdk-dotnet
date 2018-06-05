@@ -5,8 +5,8 @@ namespace AuthorizeNet {
         IGatewayRequest AddCustomer(string ID, string email,string first, string last, string address, string city, string state, string zip);
         IGatewayRequest AddDuty(decimal amount, string name, string description);
         IGatewayRequest AddDuty(decimal amount);
-        IGatewayRequest AddFraudCheck();
-        IGatewayRequest AddFraudCheck(string customerIP);
+        //IGatewayRequest AddFraudCheck();
+        //IGatewayRequest AddFraudCheck(string customerIP);
         IGatewayRequest AddFreight(decimal amount, string name, string description);
         IGatewayRequest AddFreight(decimal amount);
         IGatewayRequest AddInvoice(string invoiceNumber);

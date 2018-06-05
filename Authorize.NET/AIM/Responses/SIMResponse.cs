@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Specialized;
 using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace AuthorizeNet {
     public class SIMResponse : AuthorizeNet.IGatewayResponse {
@@ -14,7 +15,7 @@ namespace AuthorizeNet {
             _post = post;
         }
 
-        public SIMResponse() : this(HttpContext.Current.Request.Form) { }
+        //public SIMResponse() : this(HttpContext.Current.Request.Form) { }
 
         public string MD5Hash {
             get {

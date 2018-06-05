@@ -8,6 +8,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Collections.Specialized;
 using System.Globalization;
+using Microsoft.AspNetCore.Http;
 
 namespace AuthorizeNet {
 
@@ -254,11 +255,12 @@ namespace AuthorizeNet {
         /// This method will pull the user's IP address for use with FDS. Only valid for Web-based transactions.
         /// </summary>
         /// <returns></returns>
-        public IGatewayRequest AddFraudCheck() {
-            if(HttpContext.Current != null)
-                this.CustomerIp = HttpContext.Current.Request.UserHostAddress;
-            return this;
-        }
+        //public IGatewayRequest AddFraudCheck() {
+        //    if (HttpContext.Current != null) {
+        //        this.CustomerIp = HttpContext.Current.Request.UserHostAddress;
+        //    }
+        //    return this;
+        //}
 
 
         /// <summary>
